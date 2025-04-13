@@ -20,7 +20,7 @@ def crop_to_circle(image):
 st.title("Co. Portfolio Creator")
 
 # Display a text box for input
-prompt = st.text_input("Please enter your query?", max_chars=2000)
+prompt = st.text_input("Please enter your query:", max_chars=2000)  # Added colon to label
 prompt = prompt.strip()
 
 # Display a primary button for submission
@@ -78,7 +78,7 @@ if submit_button and prompt:
         the_response = "Apologies, but an error occurred. Please rerun the application" 
 
     # Use trace_data and formatted_response as needed
-    st.sidebar.text_area("", value=all_data, height=300)
+    st.sidebar.text_area("Trace Information", value=all_data, height=300)  # Added label
     st.session_state['history'].append({"question": prompt, "answer": the_response})
     st.session_state['trace_data'] = the_response
   
@@ -106,25 +106,25 @@ for index, chat in enumerate(reversed(st.session_state['history'])):
     # Creating columns for Question
     col1_q, col2_q = st.columns([2, 10])
     with col1_q:
-        st.image(circular_human_image, width=125)
+        st.image(circular_human_image, width=125, caption="User")  # Added caption
     with col2_q:
         # Generate a unique key for each question text area
-        st.text_area("Q:", value=chat["question"], height=68, key=f"question_{index}", disabled=True)
+        st.text_area("Question", value=chat["question"], height=68, key=f"question_{index}", disabled=True)  # Changed label from "Q:" to "Question"
 
     # Creating columns for Answer
     col1_a, col2_a = st.columns([2, 10])
     if isinstance(chat["answer"], pd.DataFrame):
         with col1_a:
-            st.image(circular_robot_image, width=100)
+            st.image(circular_robot_image, width=100, caption="Agent")  # Added caption
         with col2_a:
             # Generate a unique key for each answer dataframe
             st.dataframe(chat["answer"], key=f"answer_df_{index}")
     else:
         with col1_a:
-            st.image(circular_robot_image, width=150)
+            st.image(circular_robot_image, width=150, caption="Agent")  # Added caption
         with col2_a:
             # Generate a unique key for each answer text area
-            st.text_area("A:", value=chat["answer"], height=100, key=f"answer_{index}")
+            st.text_area("Answer", value=chat["answer"], height=100, key=f"answer_{index}")  # Changed label from "A:" to "Answer"
 
 # Example Prompts Section
 st.write("## Test Knowledge Base Prompts")
