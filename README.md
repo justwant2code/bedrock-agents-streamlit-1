@@ -183,10 +183,9 @@ The Lambda function serves as a backend API for the AI agent, managing company d
 * Includes FOMC summary and portfolio details in the email body
 * Uses a verified sender email address 
 
-Response Format:
+Response Structure:
 
-        * Response Structure:
-        * Returns a standardized response format containing:
+Returns a standardized response format containing:
             * Message version
             * HTTP status code
             * Response body in JSON format
