@@ -161,6 +161,45 @@ Click the verification link and you should now see your email as a verified Iden
 
 ![Create Function2](images/create_function2.png)
 
+The Lambda function serves as a backend API for the AI agent, managing company data and portfolio operations. It provides the following functionality: 
+
+**companyResearch Function:**
+
+* Takes a company name parameter using case-insensitive matching
+* Searches through a predefined list of companies across Technology and Real Estate sectors
+* Returns detailed company information including revenue, expenses, profit, and employee count
+
+**createPortfolio Function:**
+
+* Accepts numCompanies (integer) and industry (string) parameters
+* Filters the company dataset by industry sector
+* Returns top-performing companies sorted by profit in descending order
+* Limits results to the specified number of companies
+
+**sendEmail Function:**
+
+* Requires emailAddress, fomcSummary, and portfolio parameters
+* Sends HTML and plain text formatted emails using Amazon SES
+* Includes FOMC summary and portfolio details in the email body
+* Uses a verified sender email address 
+
+Response Format:
+
+        * Response Structure:
+        * Returns a standardized response format containing:
+            * Message version
+            * HTTP status code
+            * Response body in JSON format
+            * Action group and API path information
+
+Error Handling:
+
+* Returns 404 status code for unrecognized API paths
+* Includes error messages in the response body for failed operations
+* Implements specific error handling for email sending operations
+
+The Lambda function essentially acts as the bridge between the Bedrock AI agent and the business logic for portfolio management and company research operations.
+
 - Copy the python code provided below, or from the file [here](https://github.com/build-on-aws/bedrock-agents-streamlit/blob/main/ActionLambda.py) into your Lambda function. 
 
 ```python
