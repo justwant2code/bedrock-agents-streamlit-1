@@ -31,6 +31,12 @@ Alternatively, this README will walk you through the step-by-step process to set
 ## Prerequisites
 - An active AWS Account.
 - Familiarity with AWS services like Amazon Bedrock, S3, Lambda, and Cloud9.
+- Verified Amazon SES Email:
+  One of the features we are going to use in this workshop is sending emails through the Amazon Simple Email Service (SES). To do this, we have to configure an email as a verified sender in the service. 
+
+Start by navigating to the AWS console and searching **SES** in the search bar. Click **Amazon Simple Email Service**
+
+
 
 ## Diagram
 
