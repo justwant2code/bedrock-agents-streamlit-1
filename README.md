@@ -364,6 +364,20 @@ def lambda_handler(event, context):
 
 ![Lambda deploy](images/lambda_deploy.png)
 
+-Next we’ll apply a permission for the lambda function to send emails through SES. In the Lambda console select the **Configuration** tab and click on the **Execution role**. 
+
+![Role](images/Role_1.png)
+
+Next move to the **Add permissions** drop down and choose **Attach policies**
+
+![Role](images/Role_2.png)
+
+In the **Search** tab, search for **SES**. Then check the box to the left of **AmazonSESFullAccess**. This will give the Lambda function permissions to send emails with the Bedrock agents. Once the box is checked, hit the **Add Permissions** button on the bottom right of the screen. 
+
+![Role](images/Role_3.png)
+
+You should now see the **AmazonSESFullAccess** Permission added in the Permissions policies for the execution role. 
+
 - Next, apply a resource policy to the Lambda to grant Bedrock agent access. To do this, we will switch the top tab from **code** to **configuration** and the side tab to **Permissions**. Then, scroll to the **Resource-based policy statements** section and click the **Add permissions** button.
 
 ![Permissions config](images/permissions_config.png)
