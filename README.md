@@ -758,11 +758,12 @@ FOMC Report:
 
 - Example prompt for email sending.
   ```text
-Portfolio Performance Analysis and FOMC Summary Request:
-Please provide: Analysis of the top 3 performing investment portfolios. Include key performance metrics and a brief explanation of success factors for each portfolio.
-Also provide the latest FOMC Meeting Summary. Along with policy decisions, economic outlook, and notable changes from previous meeting.
-Delivery: Send complete analysis results in an email to youremail@email.com
+  Portfolio Performance Analysis and FOMC Summary Request:
+  Please provide: Analysis of the top 3 performing investment portfolios. Include key     performance metrics and a brief explanation of success factors for each portfolio.
+  Also provide the latest FOMC Meeting Summary. Along with policy decisions, economic     outlook, and notable changes from previous meeting.
+  Delivery: Send complete analysis results in an email to youremail@email.com
   ```
+  
   `(Replace the email with your verified email in SES.)`
 
 ![TestAgent](images/testagent.png)
