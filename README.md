@@ -186,10 +186,10 @@ The Lambda function serves as a backend API for the AI agent, managing company d
 Response Structure:
 
 Returns a standardized response format containing:
-            * Message version
-            * HTTP status code
-            * Response body in JSON format
-            * Action group and API path information
+* Message version
+* HTTP status code
+* Response body in JSON format
+* Action group and API path information
 
 Error Handling:
 
