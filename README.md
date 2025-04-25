@@ -36,7 +36,7 @@ Alternatively, this README will walk you through the step-by-step process to set
 
 Start by navigating to the AWS console and searching **SES** in the search bar. Click **Amazon Simple Email Service**
 
-(images/SES_1.png)
+![SES Instruction](images/SES_1.png)
 
 
 ## Diagram
