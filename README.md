@@ -32,11 +32,34 @@ Alternatively, this README will walk you through the step-by-step process to set
 - An active AWS Account.
 - Familiarity with AWS services like Amazon Bedrock, S3, Lambda, and Cloud9.
 - Verified Amazon SES Email:
-  One of the features we are going to use in this workshop is sending emails through the Amazon Simple Email Service (SES). To do this, we have to configure an email as a verified sender in the service. 
+
+One of the features we are going to use in this workshop is sending emails through the Amazon Simple Email Service (SES). To do this, we have to configure an email as a verified sender in the service. 
 
 Start by navigating to the AWS console and searching **SES** in the search bar. Click **Amazon Simple Email Service**
 
 ![SES Instruction](images/SES_1.png)
+
+One on the service page, navigate to **Identities** in the **Configuration** tab on the left. 
+
+We are now gonna verify your email as an identity. Once in the identities section, click on the **Create Identity** button. 
+
+![SES Instruction](images/SES_2.png)
+
+Next on the Create Identity page, we are going to choose **Email address** as the identity type. You will then add your email in the Email Address section and hit the **Create Identity** button. 
+
+![SES Instruction](images/SES_3.png)
+
+You will then see that action is required to verify the email. You will have to navigate to the email that you entered to hit the verification link.
+
+![SES Instruction](images/SES_4.png)
+
+You will then recieve an email that looks similar to the following: 
+
+![SES Instruction](images/SES_5.png)
+
+Click the verification link and you should now see your email as a verified Identity. You can now use it as a verified email in SES!
+
+![SES Instruction](images/SES_6.png)
 
 
 ## Diagram
