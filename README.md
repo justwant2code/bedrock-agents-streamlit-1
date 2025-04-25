@@ -197,7 +197,7 @@ def lambda_handler(event, context):
         portfolioDataString = get_named_parameter(event, 'portfolio')
         
         # Create the email content
-        SENDER = "madiegue@amazon.com"  # Replace with your email. Must be verified in SES
+        SENDER = "youremail@mail.com"  # Replace with your email. Must be verified in SES
         RECIPIENT = emailAddress
         SUBJECT = "Company Portfolio and Search Results Summary Report"
         
