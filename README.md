@@ -199,7 +199,7 @@ Error Handling:
 
 The Lambda function essentially acts as the bridge between the Bedrock AI agent and the business logic for portfolio management and company research operations.
 
-- Copy the python code provided below, or from the file [here](https://github.com/build-on-aws/bedrock-agents-streamlit/blob/main/ActionLambda.py) into your Lambda function. 
+- Copy the python code provided below, or from the file [here](https://github.com/build-on-aws/bedrock-agents-streamlit/blob/main/ActionLambda.py) into your Lambda function. **NOTE:** Change the sender email address from youremail@email.com to your verified email address in Amazon SES. 
 
 ```python
 import json
